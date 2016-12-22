@@ -23,21 +23,39 @@ Loc::loadMessages(__FILE__);?>
 <?$APPLICATION->ShowPanel();?>
 <div id="main_container">
     <div id="header">
-        <div id="logo"><a href="home.html"><img src="<?=SITE_TEMPLATE_PATH;?>/_include/images/logo.gif" alt="" title="" border="0" /></a></div>
+        <div class="logo"><?if(!CSite::InDir('/')):?><a href="/"><?endif;?>
+                <?$APPLICATION->IncludeComponent(
+                    "bitrix:main.include",
+                    "",
+                    Array(
+                        "COMPONENT_TEMPLATE" => ".default",
+                        "AREA_FILE_SHOW" => "file",
+                        "AREA_FILE_SUFFIX" => "inc",
+                        "EDIT_TEMPLATE" => "",
+                        "PATH" => SITE_TEMPLATE_PATH."/include_areas/logo.php"
+                    )
+                );?>
+                <?if(!CSite::InDir('/')):?></a><?endif;?></div>
 
-        <div id="menu">
-            <ul>
-                <li><a class="current" href="#" title="">home</a></li>
-                <li class="divider"></li>
-                <li><a href="#" title="">webdesign</a></li>
-                <li class="divider"></li>
-                <li><a href="#" title="">identity</a></li>
-                <li class="divider"></li>
-                <li><a href="#" title="">print</a></li>
-                <li class="divider"></li>
-                <li><a href="#" title="">contact</a></li>
-            </ul>
-        </div>
+        <?$APPLICATION->IncludeComponent(
+	"bitrix:menu", 
+	"top_menu", 
+	array(
+		"ALLOW_MULTI_SELECT" => "N",
+		"CHILD_MENU_TYPE" => "left",
+		"DELAY" => "N",
+		"MAX_LEVEL" => "2",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_TYPE" => "A",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"ROOT_MENU_TYPE" => "left",
+		"USE_EXT" => "Y",
+		"COMPONENT_TEMPLATE" => "top_menu"
+	),
+	false
+);?>
 
     </div>
 
