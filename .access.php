@@ -1,8 +1,14 @@
 <?
+$PERM["/"]["G2"]="X";
+$PERM["/"]["G6"]="X";
+$PERM["/"]["G3"]="X";
+$PERM["/"]["G4"]="X";
+$PERM["/"]["G7"]="X";
+$PERM["/"]["G5"]="X";
+$PERM["/"]["G8"]="X";
+$PERM["/"]["*"]="X";
 $PERM["personal"]["8"]="W";
 $PERM["catalog"]["8"]="W";
 $PERM["news"]["8"]="W";
 $PERM["about"]["8"]="W";
-$PERM["index.php"]["8"]="W";
-$PERM["/"]["*"]="R";
 ?>

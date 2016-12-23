@@ -16,8 +16,8 @@ $this->setFrameMode(true);
 <div class="slide slide-roundabout bg1">
     <div class="containit ornament-right">
         <div class="roundaboutshadow">
-            <h1 class="mb4">You can have a Bigger single  Roundabout here.</h1>
-            <p class="mb20">Amazingly this IS compatible with all modern and current Browsers.</p>
+            <h1 class="mb4">Самые странные товары мира у нас в магазине.</h1>
+            <p class="mb20">Но лучше ничего здесь не покупать.</p>
             <!-- roundabout images targets, prettyphoto opens on click of the middle item -->
             <!-- the actual roundabout -->
             <?if (!empty($arResult["ROWS"])):?>

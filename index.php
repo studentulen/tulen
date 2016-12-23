@@ -1,43 +1,10 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
+$APPLICATION->SetTitle("Интернет-магазин \"strange things\"");
 ?>
-<?if (IsModuleInstalled("advertising")):?>
-<?$APPLICATION->IncludeComponent(
-	"bitrix:advertising.banner", 
-	"bootstrap", 
-	array(
-		"COMPONENT_TEMPLATE" => "bootstrap",
-		"TYPE" => "MAIN",
-		"NOINDEX" => "Y",
-		"QUANTITY" => "3",
-		"BS_EFFECT" => "fade",
-		"BS_CYCLING" => "N",
-		"BS_WRAP" => "Y",
-		"BS_PAUSE" => "Y",
-		"BS_KEYBOARD" => "Y",
-		"BS_ARROW_NAV" => "Y",
-		"BS_BULLET_NAV" => "Y",
-		"BS_HIDE_FOR_TABLETS" => "N",
-		"BS_HIDE_FOR_PHONES" => "Y",
-		"CACHE_TYPE" => "A",
-		"CACHE_TIME" => "36000000",
-		"DEFAULT_TEMPLATE" => "-",
-		"SCALE" => "N",
-		"CYCLING" => "N",
-		"EFFECTS" => "",
-		"ANIMATION_DURATION" => "500",
-		"WRAP" => "1",
-		"ARROW_NAV" => "1",
-		"BULLET_NAV" => "2",
-		"KEYBOARD" => "N",
-		"HEIGHT" => "300"
-	),
-	false
-);?>
-<?endif?>
 
-<h2>Тренды сезона</h2>
+
+<h2>Тренды млечного пути</h2>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:catalog.section", 
 	".default", 
